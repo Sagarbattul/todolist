@@ -56,4 +56,10 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build
+          path: .next
       
