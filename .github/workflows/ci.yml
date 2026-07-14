@@ -38,25 +38,25 @@ jobs:
 
       - run: npm run type-check
 
-  build:
-  runs-on: ubuntu-latest
+    build:
+    runs-on: ubuntu-latest
 
-  environment:
-    name: development
+    environment:
+      name: development
 
-  needs:
-    - lint
-    - type-check
+    needs:
+      - lint
+      - type-check
 
-  steps:
-    - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 22
-        cache: npm
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
 
-    - run: npm ci
+      - run: npm ci
 
-    - run: npm run build
+      - run: npm run build
       
