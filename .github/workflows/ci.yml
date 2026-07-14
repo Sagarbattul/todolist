@@ -38,7 +38,7 @@ jobs:
 
       - run: npm run type-check
 
-    build:
+  build:
     runs-on: ubuntu-latest
 
     environment:
@@ -59,4 +59,3 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-      
