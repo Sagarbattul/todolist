@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <main className="max-w-xl mx-auto p-10">
-      <h1 className="text-4xl font-bold mb-8">TaskFlow</h1>
+      <h1 className="text-4xl font-bold mb-8">TaskFlow App</h1>
 
       <div className="flex gap-2 mb-6">
         <input
