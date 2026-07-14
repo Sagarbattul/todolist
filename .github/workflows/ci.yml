@@ -41,6 +41,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    environment:
+      name: development
+
     needs:
       - lint
       - type-check
@@ -56,10 +59,3 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: next-build
-          path: .next
-      
